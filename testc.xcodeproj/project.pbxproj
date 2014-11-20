@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CDDC8CD31A14D9350072E94A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDDC8CD21A14D9350072E94A /* main.cpp */; };
+		CDF46D831A1D8DB900143258 /* CPrimerThe4Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF46D811A1D8DB900143258 /* CPrimerThe4Chapter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		CDDC8CCF1A14D9350072E94A /* testc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testc; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDC8CD21A14D9350072E94A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CDF46D811A1D8DB900143258 /* CPrimerThe4Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe4Chapter.cpp; sourceTree = "<group>"; };
+		CDF46D821A1D8DB900143258 /* CPrimerThe4Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe4Chapter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CDDC8CD21A14D9350072E94A /* main.cpp */,
+				CDF46D811A1D8DB900143258 /* CPrimerThe4Chapter.cpp */,
+				CDF46D821A1D8DB900143258 /* CPrimerThe4Chapter.h */,
 			);
 			path = testc;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDC8CD31A14D9350072E94A /* main.cpp in Sources */,
+				CDF46D831A1D8DB900143258 /* CPrimerThe4Chapter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +238,7 @@
 				CDDC8CD81A14D9360072E94A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
