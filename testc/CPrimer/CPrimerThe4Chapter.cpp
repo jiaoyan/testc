@@ -11,12 +11,6 @@
 #include <vector>
 #include <array>
 
-char * getname(void);
-
-struct antarctica{
-    int year;
-};
-
 namespace Jiaoyan {
     static CPrimerThe4Chapter *s_SharedCPrimerThe4Chapter = NULL;
     
@@ -30,7 +24,7 @@ namespace Jiaoyan {
     
     CPrimerThe4Chapter* CPrimerThe4Chapter::sharedCPrimerThe4Chapter(){
         if (s_SharedCPrimerThe4Chapter)
-            delete s_SharedCPrimerThe4Chapter;
+            return s_SharedCPrimerThe4Chapter;
         s_SharedCPrimerThe4Chapter = new CPrimerThe4Chapter();
         return s_SharedCPrimerThe4Chapter;
     };
@@ -133,44 +127,44 @@ namespace Jiaoyan {
          */
         
         /*
-        struct things{
-            int good;
-            int bad;
-        };
-        
-        struct inflatable{
-            char name[20];
-            float volume;
-            double price;
-        };
-        
-        cout << "Hello, World!\n";
-        things thing = {1,1};
-        cout << thing.bad << "," << thing.good << endl;
-        things *ps = &thing;
-        cout << ps->bad << "," << ps->good << endl;
-        cout << (*ps).bad << "," << (*ps).good << endl;
-        
-        
-        inflatable *in = new inflatable;
-        cin.get(in->name,20);
-        cout << in->name << endl;
-        cout << (*in).name << endl;
-        delete in;// !!!free memory used by structure
-        */
+         struct things{
+         int good;
+         int bad;
+         };
+         
+         struct inflatable{
+         char name[20];
+         float volume;
+         double price;
+         };
+         
+         cout << "Hello, World!\n";
+         things thing = {1,1};
+         cout << thing.bad << "," << thing.good << endl;
+         things *ps = &thing;
+         cout << ps->bad << "," << ps->good << endl;
+         cout << (*ps).bad << "," << (*ps).good << endl;
+         
+         
+         inflatable *in = new inflatable;
+         cin.get(in->name,20);
+         cout << in->name << endl;
+         cout << (*in).name << endl;
+         delete in;// !!!free memory used by structure
+         */
         
         /*
-         char * name = NULL;
-         name = getname();
-         cout << name << "," << &name << endl;
-         cout << name << "," << (int *)name << endl;
-         delete [] name; // 将new 和 delete放到两个函数中的做法不是太好，很容易忘记delete
-         
-         name = getname();
-         cout << name << "," << &name << endl;
-         cout << name << "," << (int *)name << endl;
-         delete [] name;
-         */
+        char * name = NULL;
+        name = getname();
+        cout << name << "," << &name << endl;
+        cout << name << "," << (int *)name << endl;
+        delete [] name; // 将new 和 delete放到两个函数中的做法不是太好，很容易忘记delete
+        
+        name = getname();
+        cout << name << "," << &name << endl;
+        cout << name << "," << (int *)name << endl;
+        delete [] name;
+        */
         
         //c++的3种管理数据内存的方式，自动存储，静态存储，动态存储
         //自动变量是局部变量，通常存储在栈中，在程序执行过程中，栈在不断的增大和缩小
@@ -178,6 +172,9 @@ namespace Jiaoyan {
         //new 和 delete提供了自由存储空间，称为堆
         
         /*
+         struct antarctica{
+         int year;
+         };
          //指向指针数组的指针
          antarctica s01,s02,s03;
          s01.year = 1988;
@@ -239,4 +236,15 @@ namespace Jiaoyan {
         return true;
     };
     
+    char * CPrimerThe4Chapter::getname(void)
+    {
+        using namespace std;
+        char temp[80];
+        cout << "enter your name :" << endl;
+        cin >> temp;
+        char * pn = new char[strlen(temp) +1];
+        strcpy(pn,temp);
+        return pn;
+    }
+
 }

@@ -18,6 +18,9 @@ namespace Jiaoyan {
         ~CPrimerThe4Chapter();
         static CPrimerThe4Chapter* sharedCPrimerThe4Chapter();
         bool init();
+        
+    private:
+        char * getname(void);
     };
 }
 

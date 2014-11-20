@@ -9,39 +9,15 @@
 #include <iostream>
 #include <vector>
 #include <array>
-#include "CPrimerThe4Chapter.h"
-
-//struct things{
-//    int good;
-//    int bad;
-//};
-//
-//struct inflatable{
-//    char name[20];
-//    float volume;
-//    double price;
-//};
-//
-//char * getname(void);
-//
-//struct antarctica{
-//    int year;
-//};
+#include "CPrimer/CPrimerThe4Chapter.h"
+#include "CPrimer/CPrimerThe5Chapter.h"
 
 int main(int argc, const char * argv[]) {
     using namespace Jiaoyan;
-    CPrimerThe4Chapter* chapter4 = CPrimerThe4Chapter::sharedCPrimerThe4Chapter();
-    chapter4->init();
+//    CPrimerThe4Chapter* chapter4 = CPrimerThe4Chapter::sharedCPrimerThe4Chapter();
+//    chapter4->init();
+
+    CPrimerThe5Chapter* chapter5 = CPrimerThe5Chapter::sharedCPrimerThe5Chapter();
+    chapter5->init();
     return 0;
 }
-
-//char * getname(void)
-//{
-//    using namespace std;
-//    char temp[80];
-//    cout << "enter your name :" << endl;
-//    cin >> temp;
-//    char * pn = new char[strlen(temp) +1];
-//    strcpy(pn,temp);
-//    return pn;
-//}
