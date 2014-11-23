@@ -14,10 +14,10 @@
 
 int main(int argc, const char * argv[]) {
     using namespace Jiaoyan;
-//    CPrimerThe4Chapter* chapter4 = CPrimerThe4Chapter::sharedCPrimerThe4Chapter();
-//    chapter4->init();
+    CPrimerThe4Chapter* chapter4 = CPrimerThe4Chapter::sharedCPrimerThe4Chapter();
+    chapter4->init();
 
-    CPrimerThe5Chapter* chapter5 = CPrimerThe5Chapter::sharedCPrimerThe5Chapter();
-    chapter5->init();
+//    CPrimerThe5Chapter* chapter5 = CPrimerThe5Chapter::sharedCPrimerThe5Chapter();
+//    chapter5->init();
     return 0;
 }

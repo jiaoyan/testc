@@ -1,5 +1,6 @@
 //
 //  CPrimerThe4Chapter.cpp
+//  about 数组和指针
 //  testc
 //
 //  Created by 椒盐 on 14-11-20.
@@ -28,6 +29,7 @@ namespace Jiaoyan {
         s_SharedCPrimerThe4Chapter = new CPrimerThe4Chapter();
         return s_SharedCPrimerThe4Chapter;
     };
+    
     
     bool CPrimerThe4Chapter::init(){
         using namespace std;
@@ -226,6 +228,21 @@ namespace Jiaoyan {
          //a2.at(1);
          */
         
+        //C++ primer第四版中的一句话：数组没有获取其容器大小的size操作
+        //sizeof可以算出栈区的数组大小，但不能算出堆区的数组大小。
+        //注意必须是数组名，不能是指针，这个时候是可以算出来的。
+        //int arr[10] = {1,2,3,4,5,6,7,8,9,0};
+        //int *pbeg = begin(arr);
+        //int *pend = end(arr);
+        //ptrfiff_t diff = pend - pbeg;
+        
+        //C++ primer第四版中的一句话：没有所有元素都是引用的数组
+        //int &ary[] //ary首先向右结合，所以这个相当于 (int&)ary[]
+        //ary是个数组，其中的元素是引用。不过这个是非法的。C++primer上说了这个是非法的
+        //因为引用是否具有存储是实现相关的，因而引用不是对象，但数组要求元素是对象，因而不存在引用数组
+        //int (&ary)[10] //ary首先和&结合，所以ary是引用，引用的对象是数组
+        
+        
         /******************************************************************************/
         //关于const的修饰对象总结
         //    const int *A; //const修饰指向的对象，A可变，A指向的对象不可变
@@ -248,3 +265,121 @@ namespace Jiaoyan {
     }
 
 }
+
+/**
+*ps:
+*数组的维数必须用值大于等于1的常量表达式定义
+ 整形字面值常量，枚举常量，用常量表达式初始化的整形const对象
+ 注:const int buffsz = get_size();buffsz是不能用来定义数组维数,因为只有在运行阶段，调用了get_size()方法后才能知道他的值
+    int buffsz = 20;也是不能用来定义数组维数的，因为他不是const对象，只有在运行时才能获得他的值
+ 测试: 
+    int buff = 20;
+    int ps[buff] = {'2','a'};//error报错
+    int ps[buff];//ok，这样是ok的
+ 
+*不允许数组直接复制和赋值,C++里的数组名相当于是个常指针,常量赋值给常量当然是不可以的
+ 数组名就是数组第一个元素的地址，也就是一个常量指针
+ 则a和b都是常量指针（其值肯定是不同的），如果你执行a ＝ b；那就是企图修改常量指针a的值，而在C/C＋＋里，任何常量都是不允许被修改的
+ 测试:
+    int a[3] = {1,2,3};
+    int b[3];
+    b = a;//error,can not assign one array to another
+ memcopy
+ 
+*在用下标访问元素的时候，vector的下标类型是vector::size_type,数组的下标类型是size_t,两个指针减法操作的结果ptrdiff_t
+ 测试:
+    const size_t size = 30;
+    int s[size] = {};
+    for (size_t i = 0; i<size; i++)
+ 
+*不管数组定义在哪里，如果其元素为类类型，则会自动调用默认的构造函数
+ 如果元素是基本类型，如int,如果数组在函数外定义的，则会初始化为0，如果数组是在函数内定义的，那么各个元素未初始化，其值不确定
+ 
+*万能指针 void*,注意不允许使用万能指针操作它所指向的对象
+ 测试:
+    int a = 1;
+    int *p = &a;
+    void *pp = &a;
+    cout << *pp << endl;//error invalid operands to binary expression
+ 
+ 4.11习题
+    string s , *p = 0;//这样声明是OK的，s是string对象，p是指向string对象的指针
+    s = "aaa";
+    p = "bbb";// error ,因为常量字符串在这里是const char[4]数组的第一个地址，与string*的类型不一样，不能赋值
+ 
+*指针和引用的比较
+ 引用必须初始化
+ 测试:
+     int a = 20,b = 30;
+     int *pa = &a;
+     int *pb = &b;
+     pa = pb;
+     cout << a << "," << b << "," << *pa << "," << *pb << endl;//20,30,30,30
+     int &ra = a;
+     int &rb = b;
+     ra = rb;
+     cout << a << "," << b << "," << ra << "," << rb << endl;//30,30,30,30
+ 
+*指向指针的指针，用**
+ 测试:
+    int a = 1;
+    int *pa = &a;
+    int **ppa = &pa;
+ 
+*指针也可以用下标的形式来操作
+ 测试:
+     int a[5] = {1,2,3,4,5};
+     int *p = &a[2];
+     cout << *p << endl;//3
+     int j = p[1];//对指针做下标操作，就是*(p+1)
+     cout << j << endl;//4
+     int k = p[-2];
+   +  cout << k << endl;//1
+
+*指针和const限定符,任何const量必须在定义时初始化
+ 指向const对象的指针
+ const指针
+ 测试:
+     double aa = 1.0;
+     const double *p = &aa;//const 修饰的是double,p是一个指向double类型const对象的指针
+     *p = 2.0;//error,p指向的对象不能修改
+ 
+     double d = 1.0;
+     const double *p = &d;
+     cout << *p << endl;//1
+     d = 2.0;
+     cout << *p << endl;//2
+    //不能通过p来修改p所指向的指针的值，但是可以直接修改d
+ 
+     int a = 1;
+     int *const p = &a;
+     int b = 2;
+     p = &b;//error,p不能改变
+ 
+    //关于const的修饰对象总结
+    //    const int *A; //const修饰指向的对象，A可变，A指向的对象不可变
+    //    int const *A; //const修饰指向的对象，A可变，A指向的对象不可变
+    //    int *const A; //const修饰指针A， A不可变，A指向的对象可变
+    //    const int *const A;//指针A和A指向的对象都不可变
+    // 技巧:const在谁之前，就是修饰的谁
+ 
+    //普通指针是不能指向const对象的地址的
+     const int i = 20;
+     int *p = NULL;
+     //p = &i;//error ,将const对象的地址赋给一个指向非const对象的指针是错误的
+     int j = 20;
+     const int *pp = NULL;
+     pp = &j;//ok
+ 
+ 
+*指针和typedef
+ 在typedef中使用指针会很麻烦
+ 测试:
+     typedef string* pstring;
+     string a = "";
+     const pstring p = &a;//const 和 pstring 都直接作用在p上，typedef定义了一种新类型，
+     string b = "";
+     p = &b;//error
+     *p = "wang";//ok
+ 
+**/
