@@ -11,6 +11,7 @@
 #include <array>
 #include "CPrimer/CPrimerThe4Chapter.h"
 #include "CPrimer/CPrimerThe5Chapter.h"
+#include "CPrimer/CPrimerThe6Chapter.h"
 
 int main(int argc, const char * argv[]) {
     using namespace Jiaoyan;
@@ -19,5 +20,11 @@ int main(int argc, const char * argv[]) {
 
 //    CPrimerThe5Chapter* chapter5 = CPrimerThe5Chapter::sharedCPrimerThe5Chapter();
 //    chapter5->init();
+<<<<<<< Updated upstream
+=======
+    
+    CPrimerThe6Chapter* chapter6 = CPrimerThe6Chapter::sharedCPrimerThe6Chapter();
+    chapter6->init();
+>>>>>>> Stashed changes
     return 0;
 }
