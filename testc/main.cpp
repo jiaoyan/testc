@@ -20,11 +20,8 @@ int main(int argc, const char * argv[]) {
 
 //    CPrimerThe5Chapter* chapter5 = CPrimerThe5Chapter::sharedCPrimerThe5Chapter();
 //    chapter5->init();
-<<<<<<< Updated upstream
-=======
     
     CPrimerThe6Chapter* chapter6 = CPrimerThe6Chapter::sharedCPrimerThe6Chapter();
     chapter6->init();
->>>>>>> Stashed changes
     return 0;
 }
