@@ -84,7 +84,14 @@ namespace Jiaoyan {
         ch2 = cin.get();
         cout << "ch1 = " << ch1 << ",ch2 = " << ch2 << endl;//在这里输入一个字符的时候会停止
         
-        
+        /*
+        xcode是有自己的缓存的，相当于虚拟机（eclipse），所以你这样不用绝对路径；要到他缓存里面找，用了绝对路径就可以了。你换换地址
+        如果你要看看你的hello.txt文件
+        你打开finder 按command＋shift＋g，输入/Users/你的apple机名字/Library/Developer/Xcode
+        然后进入DriverData
+        你可以看到你所有做过的还在的和删掉的文件，找到你的目前的文件，然后点击进入Build -> Product -> Debug里面就是你创建的hello.txt
+        http://blog.csdn.net/SearchLife/article/details/3491768
+         */
         return true;
     }
 }
