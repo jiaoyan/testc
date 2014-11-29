@@ -22,5 +22,9 @@ namespace Jiaoyan {
         bool init();
     private:
         int sum_arr(int arr[],int n);
+        int sun_arr2(int *begin,int *end);
+        int sum_arr2wei(int (*arr)[4],int size);
+        char *create_char(char c,int times);
+        void countdown(int n);
     };
 }
