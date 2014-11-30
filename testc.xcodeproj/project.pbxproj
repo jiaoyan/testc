@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2C35811A29CA1000E898A4 /* CPrimerThe8Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD2C357F1A29CA1000E898A4 /* CPrimerThe8Chapter.cpp */; };
 		CDD4FB401A23250800C28F09 /* CPrimerThe6Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD4FB3E1A23250800C28F09 /* CPrimerThe6Chapter.cpp */; };
 		CDDC8CD31A14D9350072E94A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDDC8CD21A14D9350072E94A /* main.cpp */; };
 		CDE4B5A41A270B98007FCAE3 /* CPrimerThe7Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDE4B5A21A270B98007FCAE3 /* CPrimerThe7Chapter.cpp */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD2C357F1A29CA1000E898A4 /* CPrimerThe8Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe8Chapter.cpp; sourceTree = "<group>"; };
+		CD2C35801A29CA1000E898A4 /* CPrimerThe8Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe8Chapter.h; sourceTree = "<group>"; };
 		CDD4FB3E1A23250800C28F09 /* CPrimerThe6Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe6Chapter.cpp; sourceTree = "<group>"; };
 		CDD4FB3F1A23250800C28F09 /* CPrimerThe6Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe6Chapter.h; sourceTree = "<group>"; };
 		CDDC8CCF1A14D9350072E94A /* testc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testc; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +89,8 @@
 				CDD4FB3F1A23250800C28F09 /* CPrimerThe6Chapter.h */,
 				CDE4B5A21A270B98007FCAE3 /* CPrimerThe7Chapter.cpp */,
 				CDE4B5A31A270B98007FCAE3 /* CPrimerThe7Chapter.h */,
+				CD2C357F1A29CA1000E898A4 /* CPrimerThe8Chapter.cpp */,
+				CD2C35801A29CA1000E898A4 /* CPrimerThe8Chapter.h */,
 			);
 			path = CPrimer;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDC8CD31A14D9350072E94A /* main.cpp in Sources */,
+				CD2C35811A29CA1000E898A4 /* CPrimerThe8Chapter.cpp in Sources */,
 				CDE4B5A41A270B98007FCAE3 /* CPrimerThe7Chapter.cpp in Sources */,
 				CDF46D911A1DC4B100143258 /* CPrimerThe4Chapter.cpp in Sources */,
 				CDF46D921A1DC4B100143258 /* CPrimerThe5Chapter.cpp in Sources */,
