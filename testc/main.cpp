@@ -14,6 +14,8 @@
 #include "CPrimer/CPrimerThe6Chapter.h"
 #include "CPrimer/CPrimerThe7Chapter.h"
 #include "CPrimer/CPrimerThe8Chapter.h"
+#include "CPrimer/CPrimerThe9Chapter.h"
+#include "CPrimer/CPrimerThe10Chapter.h"
 
 int main(int argc, const char * argv[]) {
     using namespace Jiaoyan;
@@ -29,8 +31,15 @@ int main(int argc, const char * argv[]) {
 //    CPrimerThe7Chapter* chapter7 = CPrimerThe7Chapter::sharedCPrimerThe7Chapter();
 //    chapter7->init();
 
-    CPrimerThe8Chapter* chapter8 = CPrimerThe8Chapter::sharedCPrimerThe8Chapter();
-    chapter8->init();
+//    CPrimerThe8Chapter* chapter8 = CPrimerThe8Chapter::sharedCPrimerThe8Chapter();
+//    chapter8->init();
+    
+//    CPrimerThe9Chapter* chapter9 = CPrimerThe9Chapter::sharedCPrimerThe9Chapter();
+//    chapter9->init();
+    
+    CPrimerThe10Chapter* chapter10 = CPrimerThe10Chapter::sharedCPrimerThe10Chapter();
+    chapter10->init();
+
     
     return 0;
 }

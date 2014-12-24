@@ -11,6 +11,9 @@
 		CDD4FB401A23250800C28F09 /* CPrimerThe6Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD4FB3E1A23250800C28F09 /* CPrimerThe6Chapter.cpp */; };
 		CDDC8CD31A14D9350072E94A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDDC8CD21A14D9350072E94A /* main.cpp */; };
 		CDE4B5A41A270B98007FCAE3 /* CPrimerThe7Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDE4B5A21A270B98007FCAE3 /* CPrimerThe7Chapter.cpp */; };
+		CDE85BE51A4AE8C4006EB6FA /* CPrimerThe9Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDE85BDF1A4AE8C4006EB6FA /* CPrimerThe9Chapter.cpp */; };
+		CDE85BE61A4AE8C4006EB6FA /* CPrimerThe10Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDE85BE11A4AE8C4006EB6FA /* CPrimerThe10Chapter.cpp */; };
+		CDE85BE71A4AE8C4006EB6FA /* CPrimerThe11Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDE85BE31A4AE8C4006EB6FA /* CPrimerThe11Chapter.cpp */; };
 		CDF46D911A1DC4B100143258 /* CPrimerThe4Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF46D8D1A1DC4B100143258 /* CPrimerThe4Chapter.cpp */; };
 		CDF46D921A1DC4B100143258 /* CPrimerThe5Chapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF46D8F1A1DC4B100143258 /* CPrimerThe5Chapter.cpp */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,12 @@
 		CDDC8CD21A14D9350072E94A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CDE4B5A21A270B98007FCAE3 /* CPrimerThe7Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe7Chapter.cpp; sourceTree = "<group>"; };
 		CDE4B5A31A270B98007FCAE3 /* CPrimerThe7Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe7Chapter.h; sourceTree = "<group>"; };
+		CDE85BDF1A4AE8C4006EB6FA /* CPrimerThe9Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe9Chapter.cpp; sourceTree = "<group>"; };
+		CDE85BE01A4AE8C4006EB6FA /* CPrimerThe9Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe9Chapter.h; sourceTree = "<group>"; };
+		CDE85BE11A4AE8C4006EB6FA /* CPrimerThe10Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe10Chapter.cpp; sourceTree = "<group>"; };
+		CDE85BE21A4AE8C4006EB6FA /* CPrimerThe10Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe10Chapter.h; sourceTree = "<group>"; };
+		CDE85BE31A4AE8C4006EB6FA /* CPrimerThe11Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe11Chapter.cpp; sourceTree = "<group>"; };
+		CDE85BE41A4AE8C4006EB6FA /* CPrimerThe11Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe11Chapter.h; sourceTree = "<group>"; };
 		CDF46D8D1A1DC4B100143258 /* CPrimerThe4Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe4Chapter.cpp; sourceTree = "<group>"; };
 		CDF46D8E1A1DC4B100143258 /* CPrimerThe4Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPrimerThe4Chapter.h; sourceTree = "<group>"; };
 		CDF46D8F1A1DC4B100143258 /* CPrimerThe5Chapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPrimerThe5Chapter.cpp; sourceTree = "<group>"; };
@@ -81,6 +90,12 @@
 		CDF46D881A1DC44800143258 /* CPrimer */ = {
 			isa = PBXGroup;
 			children = (
+				CDE85BDF1A4AE8C4006EB6FA /* CPrimerThe9Chapter.cpp */,
+				CDE85BE01A4AE8C4006EB6FA /* CPrimerThe9Chapter.h */,
+				CDE85BE11A4AE8C4006EB6FA /* CPrimerThe10Chapter.cpp */,
+				CDE85BE21A4AE8C4006EB6FA /* CPrimerThe10Chapter.h */,
+				CDE85BE31A4AE8C4006EB6FA /* CPrimerThe11Chapter.cpp */,
+				CDE85BE41A4AE8C4006EB6FA /* CPrimerThe11Chapter.h */,
 				CDF46D8D1A1DC4B100143258 /* CPrimerThe4Chapter.cpp */,
 				CDF46D8E1A1DC4B100143258 /* CPrimerThe4Chapter.h */,
 				CDF46D8F1A1DC4B100143258 /* CPrimerThe5Chapter.cpp */,
@@ -151,9 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE85BE71A4AE8C4006EB6FA /* CPrimerThe11Chapter.cpp in Sources */,
 				CDDC8CD31A14D9350072E94A /* main.cpp in Sources */,
 				CD2C35811A29CA1000E898A4 /* CPrimerThe8Chapter.cpp in Sources */,
 				CDE4B5A41A270B98007FCAE3 /* CPrimerThe7Chapter.cpp in Sources */,
+				CDE85BE61A4AE8C4006EB6FA /* CPrimerThe10Chapter.cpp in Sources */,
+				CDE85BE51A4AE8C4006EB6FA /* CPrimerThe9Chapter.cpp in Sources */,
 				CDF46D911A1DC4B100143258 /* CPrimerThe4Chapter.cpp in Sources */,
 				CDF46D921A1DC4B100143258 /* CPrimerThe5Chapter.cpp in Sources */,
 				CDD4FB401A23250800C28F09 /* CPrimerThe6Chapter.cpp in Sources */,
